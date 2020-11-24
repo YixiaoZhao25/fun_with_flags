@@ -1,12 +1,9 @@
-
-
 Page({
-  onLoad:function(){ 
-    let tableName = 'countries'
-    let Country = new wx.BaaS.TableObject(tableName)
-    Country.find().then(res => {
+  onLoad: function () {
+    // Fetch all the flags from database
+    let countries = new wx.BaaS.TableObject("countries")
+    countries.find().then(res => {
       console.log(res)
-      this.setData({countries: res.data.objects})
     })
-  }  
+  }
 })

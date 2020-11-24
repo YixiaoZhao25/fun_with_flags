@@ -1,2 +1,13 @@
-<!--pages/show/show.wxml-->
-<text>pages/show/show.wxml</text>
+
+<view class="header">Fun with {{name}} </view>
+<view class="container-card">
+  <view class="card-title"> This is the flag from the country of {{name}}</view>
+<image src="https://wonderfulengineering.com/wp-content/uploads/2015/08/China-Flag-1.png"></image>
+<view class="funfact-card">
+  <view class="card-title"> Funfact</view>
+</view>
+<view class="restaurant-card">
+  <view class="card-title"> Best {{}} food in the city </view>
+  <view class="adress"> Adress: </view>
+</view>
+</view>
