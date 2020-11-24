@@ -2,29 +2,27 @@ page {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  height: 100vh;  
-}
-
-.card-product {
-  overflow: hidden;
-  height: 200px;
-  background:grey;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-}
-
-.card-product-info {
-  margin-bottom: 20px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
 }
 
 .card {
-  height: 50px;
+  height: 200px;
+  width: 100%;
+  background: white;
+  padding: 16rpx;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  margin: 32rpx 0;
 }
 
+.card image {
+  height: 50%;
+  width: 100%;
+}
+
+.card > .name {
+  text-align: center;
+  margin: 16rpx 0;
+}
 
 button, .button {
  margin: 10px 0px;

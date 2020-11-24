@@ -4,6 +4,7 @@ Page({
     let countries = new wx.BaaS.TableObject("countries")
     countries.find().then(res => {
       console.log(res)
+      this.setData({countries: res.data.objects})
     })
   }
 })
