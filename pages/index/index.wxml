@@ -1,1 +1,6 @@
-<view>Index Page</view>
+<view class="container">
+  <view class="card" wx:for="{{countries}}"> 
+    <image src="{{item.photo.path}}" mode="aspectFit"></image>
+    <view class="name">{{item.name}}</view>
+  </view>
+</view>
