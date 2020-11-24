@@ -43,7 +43,7 @@ Page {
   border-radius: 4px 4px 4px 4px;
   padding: 10px 25px 25px 25px;
   box-sizing: border-box;
-  margin-bottom: 5px;
+  margin-bottom: 36px;
 }
 
 .card-title {
