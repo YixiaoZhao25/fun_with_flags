@@ -1,21 +1,29 @@
-/**index.wxss**/
-.userinfo {
+page {
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
+  height: 100vh;  
+}
+
+.card-product {
+  overflow: hidden;
+  height: 200px;
+  background:grey;
+  border-radius: 20px;
+  display: flex;
   align-items: center;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.card-product-info {
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 200px;
+button, .button {
+ margin: 10px 0px;
+ color: white;
+ background-color: #EC7B37;
+ border-radius: 50px;
 }
