@@ -12,6 +12,9 @@
   border-radius: 50%;
 }
 
+.card {
+  height: 50px;
+}
 .userinfo-nickname {
   color: #aaa;
 }
