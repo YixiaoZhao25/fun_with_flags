@@ -1,24 +1,32 @@
-/**index.wxss**/
-.userinfo {
+page {
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
-  align-items: center;
-}
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
 }
 
 .card {
-  height: 50px;
-}
-.userinfo-nickname {
-  color: #aaa;
+  height: 200px;
+  width: 100%;
+  background: white;
+  padding: 16rpx;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  margin: 32rpx 0;
 }
 
-.usermotto {
-  margin-top: 200px;
+.card image {
+  height: 50%;
+  width: 100%;
+}
+
+.card > .name {
+  text-align: center;
+  margin: 16rpx 0;
+}
+
+button, .button {
+ margin: 10px 0px;
+ color: white;
+ background-color: #EC7B37;
+ border-radius: 50px;
 }
