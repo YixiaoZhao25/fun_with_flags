@@ -1,1 +1,57 @@
-/* pages/show/show.wxss */
+Page {
+  background: rgb(250, 250, 250);
+}
+
+.container {
+  padding: 32rpx;
+}
+
+.header {
+  font-size: 40rpx;
+  color: gray;
+  justify-items: center;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.container-card {
+  height: 640rpx;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  border-radius: 4px 4px 4px 4px;
+  padding: 10px 25px 25px 25px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.funfact-card {
+  height: 320rpx;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  border-radius: 4px 4px 4px 4px;
+  padding: 10px 25px 25px 25px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  margin-top: 55px;
+}
+
+.restaurant-card {
+  height: 220rpx;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  border-radius: 4px 4px 4px 4px;
+  padding: 10px 25px 25px 25px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+}
+
+.card-title {
+  font-size: 35rpx;
+  font-weight: bolder;
+
+}
+
+.adress{
+font-size: medium;
+}
