@@ -66,9 +66,17 @@
     "miniprogram": {
       "list": [
         {
-          "id": -1,
+          "id": 0,
           "name": "pages/show/show",
           "pathName": "pages/show/show",
+          "query": "id=5fbd153588d98506eaf9822d",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
           "scene": null
         }
       ]

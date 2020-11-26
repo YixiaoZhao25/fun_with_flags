@@ -1,8 +1,14 @@
 
 <view class="header">Fun with Flags presents: {{countries.name}} </view>
 <view class="container-card">
-  <view class="card-title"> This is the flag from the country of {{countries.name}}</view>
-<image src="{{countries.photo}}"></image> 
+  <view class="card-title"> This is the flag from the country of {{countries.name}}
+    <view bindtap="countLikes"> 
+      <image class="likebtn" src="/pages/show/img/3 yarn, heart, needl.png">Favorite</image> 
+    </view>
+<view id="likeId" >{{countries.likednum}}</view>
+  </view>
+<image src="{{countries.photo.path}}"></image> 
+
 <view class="funfact-card">
   <view class="card-title"> Funfact:</view>
   <view>{{funfact}}</view>
