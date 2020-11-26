@@ -1,25 +1,20 @@
-
 <view class="header">Fun with Flags presents: </view>
 <view class="container-card">
-  <view class="card-title"> This is the flag from the country of {{countries.name}}
-    <view bindtap="countLikes"> 
+    <view class="card-title"> This is the flag from the country of {{countries.name}}
+      <view bindtap="countLikes"> 
       <image class="likebtn" src="/pages/show/img/3 yarn, heart, needl.png">Favorite</image> 
+      </view>
+      <view id="likeId" >{{countries.likednum}}</view>
     </view>
-<view id="likeId" >{{countries.likednum}}</view>
-  </view>
 <image src="{{countries.photo.path}}"></image> 
 
-<view class="funfact-card">
-  <view class="card-title"> Funfact:</view>
-  <view>{{funfact}}</view>
-
-</view>
 <view class="funfact-card" wx:for="{{funfacts}}">
   <view class="card-title"> Funfact:</view>
   <view>{{item.description}}</view>
 </view>
 
-
 <view class="button">
-<button bindtap="switchTab" type="primary">Go back to Index</button>
+  <button bindtap="switchTab" type="primary">Go back to Index</button>
 </view>
+</view>
+
