@@ -16,4 +16,12 @@ Page({
     console.log(id)
     
   }
+  goToCountry: function(e) {
+    console.log(e)
+    let id= e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: `/pages/show/show?id=${id}`,
+    })
+  },
+
 })
