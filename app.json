@@ -1,7 +1,8 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/show/show"
+    "pages/show/show",
+    "pages/profile/profile"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -16,5 +17,21 @@
     }
   }, 
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#ffffff",
+    "selectedColor": "#F7DD8E",
+    "backgroundColor": "#565158",
+    "list":[
+      {
+        "pagePath": "pages/index/index",
+        "text": "HOMEPAGE"
+      },
+       {
+        "pagePath":"pages/profile/profile",
+        "text":"PROFILE"
+       } 
+    ]
+  }
+
 }
