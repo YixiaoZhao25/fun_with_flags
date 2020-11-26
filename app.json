@@ -18,5 +18,21 @@
     }
   }, 
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#ffffff",
+    "selectedColor": "#F7DD8E",
+    "backgroundColor": "#565158",
+    "list":[
+      {
+        "pagePath": "pages/index/index",
+        "text": "HOMEPAGE"
+      },
+       {
+        "pagePath":"pages/profile/profile",
+        "text":"PROFILE"
+       } 
+    ]
+  }
+
 }

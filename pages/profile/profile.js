@@ -1,65 +1,43 @@
 // pages/profile/profile.js
 Page({
-
-  /**
-   * Page initial data
-   */
   data: {
 
   },
-
-  /**
-   * Lifecycle function--Called when page load
-   */
   onLoad: function (options) {
-
+    let page = this
+    wx.BaaS.auth.getCurrentUser().then(function(res) {
+      page.setData ({
+        CurrentUser:res
+      })
+      let favourites = new wx.BaaS.TableObject('favoutites')
+      let query = new wx.BaaS.Query()
+      query.compare("user_id","=", res.id)
+      favourites.setQuery(query).expand(['country_id']).find().then(function(res) {
+        console.log (res)
+        Page.setData ({
+          favourites: res.data.objects
+        })
+      })
+    })
   },
-
-  /**
-   * Lifecycle function--Called when page is initially rendered
-   */
   onReady: function () {
 
   },
-
-  /**
-   * Lifecycle function--Called when page show
-   */
   onShow: function () {
 
   },
-
-  /**
-   * Lifecycle function--Called when page hide
-   */
   onHide: function () {
 
   },
-
-  /**
-   * Lifecycle function--Called when page unload
-   */
   onUnload: function () {
 
   },
-
-  /**
-   * Page event handler function--Called when user drop down
-   */
   onPullDownRefresh: function () {
 
   },
-
-  /**
-   * Called when page reach bottom
-   */
   onReachBottom: function () {
 
   },
-
-  /**
-   * Called when user click on the top right corner to share
-   */
   onShareAppMessage: function () {
 
   }
