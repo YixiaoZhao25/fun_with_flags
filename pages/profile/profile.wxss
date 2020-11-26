@@ -1,1 +1,38 @@
-/* pages/profile/profile.wxss */
+page {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.card {
+  height: 100px;
+  width: 100%;
+  background: white;
+  padding: 16rpx;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  margin: 32rpx 0;
+  display: flex;
+
+}
+
+.name{
+color: #565158;
+font-size: 40rpx;
+font-weight: 600;
+font-style: initial;
+}
+
+.card2 {
+  height: 500px;
+  width: 100%;
+  background: white;
+  padding: 16rpx;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  margin: 32rpx 0;
+  font-size: 50rpx;
+  font-weight: 600;
+  color: #565158;
+  font-style: initial;
+}

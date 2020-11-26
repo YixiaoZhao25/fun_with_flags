@@ -1,7 +1,9 @@
 <view class="container">
-  <view class="card" wx:for="{{countries}}"> 
+
+  <view class="card" wx:for="{{countries}}" bindtap="goToCountry" data-id="{{item.id}}"> 
     <image src="{{item.photo.path}}" mode="aspectFit"></image>
     <view class="name">{{item.name}}</view>
   </view>
+
 </view>
 

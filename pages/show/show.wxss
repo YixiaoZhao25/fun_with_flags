@@ -35,6 +35,10 @@ Page {
   margin-bottom: 5px;
   margin-top: 55px;
 }
+.likebtn {
+  height: 68rpx;
+  width: 68rpx
+}
 
 .restaurant-card {
   height: 220rpx;
@@ -54,4 +58,8 @@ Page {
 
 .adress{
 font-size: medium;
+}
+
+.button{
+  margin-top: 35rpx;
 }
