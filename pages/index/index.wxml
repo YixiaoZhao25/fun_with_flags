@@ -1,9 +1,13 @@
-<view class="container">
+<view class="header">
+  <view class="header-name">Fun with Flags</view>
+</view>
 
-  <view class="card" wx:for="{{countries}}" bindtap="goToCountry" data-id="{{item.id}}"> 
-    <image src="{{item.photo.path}}" mode="aspectFit"></image>
+<view class="masonry">
+  <view class="card card-container" wx:for="{{countries}}" bindtap="goToCountry" data-id="{{item.id}}"> 
+    <view>
+ <image class="card-image"src="{{item.photo.path}}" mode="aspectFit"></image>
+    </view>
     <view class="name">{{item.name}}</view>
   </view>
-
 </view>
 

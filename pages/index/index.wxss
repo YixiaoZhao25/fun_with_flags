@@ -2,26 +2,61 @@ page {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  background: #E9E9E9;
 }
+
+.header{
+    background-color:#565158;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    height: 100rpx;
+    padding-top: 7rpx;
+  }
+
+  .header-name{
+    color: #F7DD8E;
+    font-size: 70rpx;
+    align-content: center;
+  }
 
 .card {
-  height: 200px;
-  width: 100%;
+  height: 350rpx;
+  width: 300rpx; 
   background: white;
-  padding: 16rpx;
+  padding: 10rpx;
   box-sizing: border-box;
-  box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-  margin: 32rpx 0;
+  box-shadow: 5rpx 5rpx 5rpx 5rpx #aaaaaa;
+  margin-left: 20rpx;
+  margin-top:30rpx;
+  border-radius: 4rpx;
+  justify-content:center;
+  display: inline-block;
+  overflow: hidden;
 }
 
-.card image {
-  height: 50%;
-  width: 100%;
+.card-container{
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.card-image {
+  height: 200rpx;
+  width: 200rpx;
+  padding-left: 30rpx;
 }
 
 .card > .name {
   text-align: center;
-  margin: 16rpx 0;
+  margin-top: 10rpx;
+  border-radius: 4rpx;
+  color: #565158 ;
+  border-radius: 4rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  font-weight: bold;
 }
 
 button, .button {
@@ -29,4 +64,22 @@ button, .button {
  color: white;
  background-color: #EC7B37;
  border-radius: 50px;
+}
+
+
+.container {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  margin-left: 10px;
+  width: 1000px;
+}
+
+.masonry { /* Masonry container */
+  column-count: 2;
+  column-gap: 1em;
+  margin: 1.5em auto;
+  max-width: 700px;
+  column-gap: 1em;
+  column-count: 2;
 }
