@@ -1,9 +1,9 @@
 <view class="contanier"> 
   <view class="card">
-    <view class='avartar'>
+    <view class='avatar'>
       <open-data type='userAvatarUrl'></open-data>
     </view>
     <open-data type="userNickName" class="name"></open-data>
   </view>
-  <view class="card2">My Favorite</view>
+  <view class="card2">My Saved</view>
 </view>
