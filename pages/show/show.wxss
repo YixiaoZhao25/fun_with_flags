@@ -1,5 +1,7 @@
 Page {
   background: #E9E9E9;
+  padding: 0 32rpx;
+  box-sizing: border-box;
 }
 
 .container {
@@ -25,18 +27,18 @@ Page {
 
   .card {
     height: 750rpx;
-    width: 700rpx; 
+    width: 100%;
     background: white;
-    padding: 10rpx;
     box-sizing: border-box;
-    box-shadow: 5rpx 5rpx 5rpx 5rpx #aaaaaa;
-    margin-left: 20rpx;
-    margin-top:30rpx;
-    padding: 20rpx;
+    box-shadow: 2rpx 2rpx 2rpx 4rpx rgba(0, 0, 0, 0.1);
+    margin: 32rpx 0;
+    padding: 32rpx;
     border-radius: 4rpx;
     justify-content:center;
-    display: inline-block;
-    overflow: hidden;
+  }
+
+  .card-img {
+    width: 100%
   }
 
   .country-footer{
@@ -47,19 +49,13 @@ Page {
   }
 
 .funfact-card {
-  height: 200rpx;
-  width: 700rpx;
+  width: 100%;
   background: white;
-  padding: 10rpx;
   box-sizing: border-box;
-  box-shadow: 5rpx 5rpx 5rpx 5rpx #aaaaaa;
-  margin-left: 20rpx;
-  margin-top:30rpx;
-  padding: 20rpx;
+  box-shadow: 2rpx 2rpx 2rpx 4rpx rgba(0, 0, 0, 0.1);
+  margin: 32rpx 0;
+  padding: 32rpx;
   border-radius: 4rpx;
-  justify-content:center;
-  display: inline-block;
-  overflow: hidden;
 }
 .likebtn {
   height: 68rpx;

@@ -29,7 +29,7 @@ Page({
     let Favorite = new wx.BaaS.TableObject("favorites")
     let favorite = Favorite.create()
     let data = {
-      user_id: this.data.currentUser.id,
+      user_id: this.data.user.id,
       country_id: this.data.country.id
     }
     
@@ -37,7 +37,8 @@ Page({
       let Countries = new wx.BaaS.TableObject("countries")
       let country = Countries.getWithoutData(this.data.country.id)
       country.set({likednum: this.data.country.likednum + 1}).update().then(res => {
-        console.log(res)
+        this.fetchCountry(this.data.country.id)
+        this.getFavorites(this.data.country.id, this.data.user.id)
       })
     })
   },
@@ -46,7 +47,7 @@ Page({
     let Favorite = new wx.BaaS.TableObject("favorites")
     let favorite = Favorite.create()
     let data = {
-      user_id: this.data.currentUser.id,
+      user_id: this.data.user.id,
       country_id: this.data.country.id
     }
     
@@ -59,29 +60,29 @@ Page({
     })
   },
 
-  getFavorites: function () {
+  getFavorites: function (countryID, userID) {
     // 1. Query our favorties table for userid and countryid
     // 2. Set this favorites array to our local data
     let Favorite = new wx.BaaS.TableObject("favorites")
-    let favorite = Favorite.create()
-    let data = {
-      user_id: this.data.currentUser.id,
-      country_id: this.data.country.id
-    }
+    let query = new wx.BaaS.Query()    
+    query.compare("country_id", "=", countryID)
+    query.compare("user_id", "=", userID)
 
-    favorite.set(data).save().then(res => {
-      let Favorites = new wx.BaaS.TableObject("favorites")
-      let favorite = Favorites.getWithoutData(this.data.country.id)
-      country.set({likednum: this.data.country.likednum}).update().then(res => {
-        console.log(res)
-      })
+    Favorite.setQuery(query).find().then(res => {
+      let liked = res.data.objects.length !== 0
+      this.setData({liked})
     })
   },
 
   onLoad: function (options) {
+    let user = wx.getStorageSync("user")
     let id = options.id
+
+    this.setData({user})
+    
     this.fetchCountry(id)
     this.fetchFunFacts(id)
+    this.getFavorites(id, user.id)
   }
 
 })
