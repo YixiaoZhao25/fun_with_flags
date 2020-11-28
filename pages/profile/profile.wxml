@@ -8,4 +8,4 @@
   <button wx:else class="btn" size="" type="primary" open-type="getUserInfo" bindgetuserinfo="userInfoHandler">Login</button>
 </view>
 
-<view class="header">My Favorites</view>
+<view class="card2 l-font">My Favorites</view>

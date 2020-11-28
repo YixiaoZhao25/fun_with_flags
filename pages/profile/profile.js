@@ -2,11 +2,12 @@
 Page({
 
   getFavorites: function (user) {
+    let page = this
     let Favorites = new wx.BaaS.TableObject('favorites')
     let query = new wx.BaaS.Query()
     query.compare("user_id", "=", user.id)
     Favorites.setQuery(query).expand(['country_id']).find().then(function(res) {
-      this.setData ({ favorites: res.data.objects })
+      page.setData ({ favorites: res.data.objects })
     })
   },
   
@@ -15,7 +16,6 @@ Page({
       wx.setStorageSync('user', user);
       this.setData({user})
       this.getFavorites(user);
-      this.getFonts()
     })
   },
 
@@ -42,6 +42,7 @@ Page({
   },
     
   onLoad: function (options) {
+    this.getFonts()
     let user = wx.getStorageSync('user');
     if (user) {
       this.setData ({ user });
