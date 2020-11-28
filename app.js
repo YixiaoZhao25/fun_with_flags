@@ -7,7 +7,7 @@ App({
     let clientID = '238017543e3900bf96a0'  // 应用名称: FunWithFlags
     wx.BaaS.init(clientID)
     wx.BaaS.auth.loginWithWechat().then(user=> {
-      wx.setStorageSync('user', user)
+      wx.setStorageSync('user', user);
     })
   },
 })
