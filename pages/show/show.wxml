@@ -17,5 +17,3 @@
   <view class="card-title">Funfact:</view>
   <view style="text-align: center">{{funFact}}</view>
 </view>
-
-

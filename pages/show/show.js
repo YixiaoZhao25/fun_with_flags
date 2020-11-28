@@ -60,9 +60,30 @@ Page({
     })
   },
 
+  getFonts: function () {
+    wx.loadFontFace({
+      family: 'Lobster',
+      source: 'url("https://cloud-minapp-38099.cloud.ifanrusercontent.com/1kirCgK9CzSXwYsT.ttf")'
+    })
+
+    wx.loadFontFace({
+      family: 'Piedra',
+      source: 'url("https://cloud-minapp-38099.cloud.ifanrusercontent.com/1kirD3cEORgqxgkU.ttf")',
+    })
+
+    wx.loadFontFace({
+      family: 'Pacifico',
+      source: 'url("https://cloud-minapp-38099.cloud.ifanrusercontent.com/1kirCwFE0sAdjmtU.ttf")',
+    })
+
+    wx.loadFontFace({
+      family: 'OpenSans',
+      source: 'url("https://cloud-minapp-38099.cloud.ifanrusercontent.com/1kirmHBeRIxvXDDF.ttf")',
+    })
+    console.log('loadfont')
+  },
+
   getFavorites: function (countryID, userID) {
-    // 1. Query our favorties table for userid and countryid
-    // 2. Set this favorites array to our local data
     let Favorite = new wx.BaaS.TableObject("favorites")
     let query = new wx.BaaS.Query()    
     query.compare("country_id", "=", countryID)
@@ -84,5 +105,4 @@ Page({
     this.fetchFunFacts(id)
     this.getFavorites(id, user.id)
   }
-
 })
