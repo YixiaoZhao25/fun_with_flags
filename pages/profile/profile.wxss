@@ -35,7 +35,7 @@ font-family: 'Lobster';
   font-size: 40rpx;
   font-weight: 500;
   color:#565158;
-  font-family:OpenSans;
+  font-family:'OpenSans';
   background-color:whitesmoke;
 }
 
