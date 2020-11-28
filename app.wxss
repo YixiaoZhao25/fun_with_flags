@@ -2,3 +2,19 @@
 .container {
   padding: 32rpx
 } 
+
+.l-font{
+  font-family: 'Lobster';
+}
+
+.pie-font{
+  font-family: 'Piedra';
+}
+
+.pac-font{
+  font-family: 'Pacifico';
+}
+
+.open-font{
+  font-family: 'OpenSans';
+}

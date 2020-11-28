@@ -1,18 +1,22 @@
 // pages/profile/profile.js
 Page({
-  data: {
-
-  },
 
   getFavorites: function (user) {
-    let Favorites = new wx.BaaS.TableObject('favorites');
-    let query = new wx.BaaS.Query();
-    
-    query.compare("user_id", "=", user.id);
-    
-    Favorites.setQuery(query).expand(['country_id']).find().then((res) => {
-      if (res.data.objects) this.setData({ favorites: res.data.objects });
-    });
+    let page = this
+    let Favorites = new wx.BaaS.TableObject('favorites')
+    let query = new wx.BaaS.Query()
+    query.compare("user_id", "=", user.id)
+    Favorites.setQuery(query).expand(['country_id']).find().then(function(res) {
+      page.setData ({ favorites: res.data.objects })
+    })
+  },
+  
+  userInfoHandler(data) {
+    wx.BaaS.auth.loginWithWechat(data).then(user => {
+      wx.setStorageSync('user', user);
+      this.setData({user})
+      this.getFavorites(user);
+    })
   },
 
   getFonts: function () {
@@ -36,11 +40,13 @@ Page({
       source: 'url("https://cloud-minapp-38099.cloud.ifanrusercontent.com/1kirmHBeRIxvXDDF.ttf")',
     })
   },
-
-  onLoad: function () {
+    
+  onLoad: function (options) {
+    this.getFonts()
     let user = wx.getStorageSync('user');
-    this.setData({user})
-    this.getFavorites(user);
-    this.getFonts();
+    if (user) {
+      this.setData ({ user });
+      this.getFavorites(user);
+    }
   }
 })

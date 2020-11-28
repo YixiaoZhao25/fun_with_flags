@@ -3,30 +3,17 @@
 </view>
 
 <view class="card">
-    <view class="card-title"> This is the flag from the country of</view>
-      <view class="country-name">{{countries.name}}</view>
-      <view bindtap="countLikes"></view>
-    <view>
-        <image src="{{countries.photo.path}}"></image>
-    </view> 
-      <view class="country-footer">
-        <view>
-          <image class="likebtn" src="/pages/show/img/heart.png"></image> 
-        </view>
-          <view class="likenum" id="likeId">
-            {{countries.likednum}}
-           </view>
-      </view>
- 
-   </view>
-
-  <view class="funfact-card">
-  <view wx:for="{{funfacts}}">
+  <view class="card-title"> This is the flag from the country of</view>
+  <view class="country-name">{{country.name}}</view>
+  <image class="card-img" src="{{country.photo.path}}"></image> 
+  <view class="country-footer">
+    <image class="likebtn" bindtap="addFavorite" wx:if="{{!liked}}" src="/pages/show/img/heart.png"/>
+    <image class="likebtn" bindtap="removeFavorite" wx:if="{{liked}}" src="/pages/show/img/heart-hover.svg"/>
+    <view class="likenum" id="likeId">{{country.likednum}}</view>
   </view>
-    <view class="card-title"> Funfact:</view>
-  <view>{{item.description}}</view>
 </view>
 
-
-
-
+<view class="funfact-card">
+  <view class="card-title">Funfact:</view>
+  <view style="text-align: center">{{funFact}}</view>
+</view>

@@ -1,29 +1,33 @@
+Page {
+  padding: 32rpx;
+  box-sizing: border-box;
+}
+
 .card {
-  height: 100px;
+  height: 240rpx;
   width: 100%;
+  margin-bottom: 32rpx;
   padding: 16rpx;
   box-sizing: border-box;
   box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-  margin-right: 20rpx;
   display: flex;
-  background-color:whitesmoke;
-  border-radius: 10px;
+  align-items: center;
 }
 
 .name {
-color: #565158;
-font-size: 35rpx;
-font-weight: 400;
-font-family: 'Lobster';
+  color: #565158;
+  font-size: 40rpx;
+  font-weight: 400;
+  font-family: 'Lobster';
+  margin: 0 32rpx;
 }
 
 .avatar {
   height: 150rpx;
   width: 150rpx;
-  border-radius: 60%;
+  border-radius: 50%;
   overflow: hidden;
 }
-
 .card2 {
   height: 500px;
   width: 100%;
@@ -32,10 +36,14 @@ font-family: 'Lobster';
   box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
   border-radius: 10px;
   margin: 32rpx 0;
-  font-size: 40rpx;
-  font-weight: 500;
+  font-size: 50rpx;
+  font-weight: 400;
   color:#565158;
-  font-family:OpenSans;
+  /* font-family:'Lobster'; */
   background-color:whitesmoke;
 }
-
+.header {
+  margin: 64rpx 0;
+  font-size: 48rpx;
+  font-weight: bold;
+}
