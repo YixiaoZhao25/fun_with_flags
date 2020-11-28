@@ -1,26 +1,25 @@
-page {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+Page {
+  padding: 32rpx;
+  box-sizing: border-box;
 }
 
 .card {
-  height: 100px;
+  height: 240rpx;
   width: 100%;
-  background: white;
+  margin-bottom: 32rpx;
   padding: 16rpx;
   box-sizing: border-box;
   box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-  margin: 32rpx 0;
   display: flex;
-  background-color: whitesmoke;
+  align-items: center;
 }
 
-.name{
-color: #565158;
-font-size: 40rpx;
-font-weight: 400;
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+.name {
+  color: #565158;
+  font-size: 40rpx;
+  font-weight: 400;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 0 32rpx;
 }
 
 .avartar{
@@ -28,6 +27,8 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   width: 150rpx;
   border-radius: 60%;
   overflow: hidden;
+  margin-left: 16 rpx;
+  margin-right: 16 rpx;
   
 }
 
@@ -44,4 +45,10 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: #565158;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   background-color: whitesmoke;
+}
+
+.header {
+  margin: 64rpx 0;
+  font-size: 48rpx;
+  font-weight: bold;
 }
