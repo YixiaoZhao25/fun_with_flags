@@ -8,6 +8,10 @@ Page({
       let country = res.data
       this.setData({ country })
     })
+    let user = wx.getStorageSync('user');
+    this.setData({user});
+    this.getFonts();
+    this.getFavorites(user);
   },
 
   fetchFunFacts: function (id) {
