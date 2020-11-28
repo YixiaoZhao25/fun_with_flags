@@ -10,4 +10,3 @@
     <view class="name">{{item.name}}</view>
   </view>
 </view>
-

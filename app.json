@@ -19,6 +19,7 @@
   }, 
   "style": "v2",
   "sitemapLocation": "sitemap.json",
+
   "tabBar": {
     "color": "#ffffff",
     "selectedColor": "#F7DD8E",
@@ -26,11 +27,15 @@
     "list":[
       {
         "pagePath": "pages/index/index",
-        "text": "HOMEPAGE"
+        "text": "HOMEPAGE",
+        "iconPath": "images/home.png", 
+        "selectedIconPath": "images/home.png"
       },
        {
         "pagePath":"pages/profile/profile",
-        "text":"PROFILE"
+        "text":"PROFILE",
+        "iconPath": "images/user.png", 
+        "selectedIconPath": "images/user.png"
        } 
     ]
   }

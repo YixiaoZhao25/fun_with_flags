@@ -27,8 +27,6 @@
   <view>{{item.description}}</view>
 </view>
 
-<view class="button">
-  <button bindtap="switchTab" type="primary">Go back to Index</button>
-</view>
+
 
 

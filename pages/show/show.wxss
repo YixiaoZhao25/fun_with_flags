@@ -21,6 +21,7 @@ Page {
   color: #F7DD8E;
   font-size: 70rpx;
   align-content: center;
+  font-family: 'Lobster';
 }
 
   .card {
