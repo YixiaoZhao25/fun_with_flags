@@ -1,44 +1,51 @@
 // pages/profile/profile.js
 Page({
-  data: {
 
-  },
-  onLoad: function (options) {
-    let page = this
-    wx.BaaS.auth.getCurrentUser().then(function(res) {
-      page.setData ({
-        CurrentUser:res
-      })
-      let favourites = new wx.BaaS.TableObject('favoutites')
-      let query = new wx.BaaS.Query()
-      query.compare("user_id","=", res.id)
-      favourites.setQuery(query).expand(['country_id']).find().then(function(res) {
-        console.log (res)
-        Page.setData ({
-          favourites: res.data.objects
-        })
-      })
+  getFavorites: function (user) {
+    let Favorites = new wx.BaaS.TableObject('favorites')
+    let query = new wx.BaaS.Query()
+    query.compare("user_id", "=", user.id)
+    Favorites.setQuery(query).expand(['country_id']).find().then(function(res) {
+      this.setData ({ favorites: res.data.objects })
     })
   },
-  onReady: function () {
-
+  
+  userInfoHandler(data) {
+    wx.BaaS.auth.loginWithWechat(data).then(user => {
+      wx.setStorageSync('user', user);
+      this.setData({user})
+      this.getFavorites(user);
+      this.getFonts()
+    })
   },
-  onShow: function () {
 
+  getFonts: function () {
+    wx.loadFontFace({
+      family: 'Lobster',
+      source: 'url("https://cloud-minapp-38099.cloud.ifanrusercontent.com/1kirCgK9CzSXwYsT.ttf")'
+    })
+
+    wx.loadFontFace({
+      family: 'Piedra',
+      source: 'url("https://cloud-minapp-38099.cloud.ifanrusercontent.com/1kirD3cEORgqxgkU.ttf")',
+    })
+
+    wx.loadFontFace({
+      family: 'Pacifico',
+      source: 'url("https://cloud-minapp-38099.cloud.ifanrusercontent.com/1kirCwFE0sAdjmtU.ttf")',
+    })
+
+    wx.loadFontFace({
+      family: 'OpenSans',
+      source: 'url("https://cloud-minapp-38099.cloud.ifanrusercontent.com/1kirmHBeRIxvXDDF.ttf")',
+    })
   },
-  onHide: function () {
-
-  },
-  onUnload: function () {
-
-  },
-  onPullDownRefresh: function () {
-
-  },
-  onReachBottom: function () {
-
-  },
-  onShareAppMessage: function () {
-
+    
+  onLoad: function (options) {
+    let user = wx.getStorageSync('user');
+    if (user) {
+      this.setData ({ user });
+      this.getFavorites(user);
+    }
   }
 })
