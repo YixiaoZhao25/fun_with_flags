@@ -12,6 +12,7 @@ Page {
   box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .name {
@@ -22,10 +23,10 @@ Page {
   margin: 0 32rpx;
 }
 
-.avatar {
+.avartar {
   height: 150rpx;
   width: 150rpx;
-  border-radius: 50%;
+  border-radius:50%;
   overflow: hidden;
 }
 
@@ -33,4 +34,13 @@ Page {
   margin: 64rpx 0;
   font-size: 48rpx;
   font-weight: bold;
+}
+
+.btn{
+  color:#F7DD8E;
+  background-color: #565158;
+  width: 30% !important;
+  padding: 10rpx;
+  border-radius: 10rpx;
+  flex-shrink: 1;
 }

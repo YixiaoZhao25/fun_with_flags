@@ -2,11 +2,13 @@
 Page({
 
   getFavorites: function (user) {
+    let page = this
     let Favorites = new wx.BaaS.TableObject('favorites')
     let query = new wx.BaaS.Query()
     query.compare("user_id", "=", user.id)
     Favorites.setQuery(query).expand(['country_id']).find().then(function(res) {
-      this.setData ({ favorites: res.data.objects })
+      console.log(res)
+      page.setData({ favorites: res.data.objects })
     })
   },
   

@@ -5,7 +5,7 @@
     <view class="name">Welcome {{user.nickname}}</view>
   </view>
   
-  <button wx:else class="btn" size="" type="primary" open-type="getUserInfo" bindgetuserinfo="userInfoHandler">Login</button>
+  <button wx:else class="btn" size="mini" open-type="getUserInfo" bindgetuserinfo="userInfoHandler">Login</button>
 </view>
 
 <view class="header">My Favorites</view>
